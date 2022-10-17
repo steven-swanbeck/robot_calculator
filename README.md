@@ -46,8 +46,23 @@ Open and source another terminal, then run:
 ```console
 rosrun ur_scripts calculator.py
 ```
+This will begin the calculator demo. Follow the in-terminal prompts, and enter a calculation string when requested. The string can contain any number of numbers and operations (valid inputs are '+', '-' , '*', '/' , '^' , '(', ')', and any integer or float), and will perform order of operations properly. The output will then be drawn by the robot in RViz. Non-integer outputs are rounded to one decimal place. The calculator will loop to allow several inputs to be processed in succession. Use the input 'q' to exit the calculator. The solutions are only communicated through the movement of the robot, so pay attention as it moves!
 
-This will begin the calculator demo. Follow the in-terminal prompts, and enter a calculation string when requested. The string can contain any number of numbers and operations (valid inputs are '+', '-' , '*', '/' , '^' , '(', ')', and any integer or float), and will perform order of operations properly. The output will then be drawn by the robot in RViz. Non-integer outputs are rounded to one decimal place. The solution is only communicated through the movement of the robot, so pay attention as it moves!
+Here is an example of how this all looks in simulation:
+
+[9.webm](https://user-images.githubusercontent.com/99771915/196276793-3d82f084-5775-41c3-ba76-3d7fdc4342c3.webm)
+
+
+## Demo with Real UR3
+Here is a demo of the robot computing and writing the answer to 1.2 * 4:
+
+https://user-images.githubusercontent.com/99771915/196271793-8dd0f9d0-390c-4272-beca-e23260c3da04.mov
+
+And writing the digits of Pi:
+
+https://user-images.githubusercontent.com/99771915/196272522-7ab801b1-c791-4ff0-8863-72c1a9a1f0a7.mov
+
+
 
 ---
 
@@ -63,3 +78,7 @@ Our package can be easily modified using the Setup Assistant by running:
 roslaunch moveit_setup_assistant setup_assistant.launch
 ```
 Mess around with all the different options and see how they change the behavior of the robot!
+
+
+
+
