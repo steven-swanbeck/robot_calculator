@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  <!--launching Gazebo, MoveIt, and RViz-->
+  <include file="$(find ur3ehand_moveit_config)/launch/demo_gazebo.launch"/>
+  
+  <!--starting rosserial python node for arduino connectivity-->
+  <node name="rosserial" pkg="rosserial_python" type="serial_node.py" args="/dev/ttyACM0"/>
+  
+  <!--running pick and place demo-->
+  <!--node name="pickplace" pkg="ur3ehand_scripts" type="test_pickplace2.py"/-->
+</launch>
