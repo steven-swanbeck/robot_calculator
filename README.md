@@ -13,19 +13,19 @@ These packages are built and tested on a system running ROS1 noetic on Ubuntu 20
 Use of these packages in a non-simulated environment requires the use of the official [Universal Robots ROS Drivers](https://github.com/UniversalRobots/Universal_Robots_ROS_Driver).   
 1. Create a Catkin workspace:
 ```console
-mkdir -p catkin_ws/src && cd catkin_ws/src
+mkdir -p catkin_ws/src && cd catkin_ws
 ```
 2. Clone the contents of this repository:
 ```console
-git clone https://github.com/steven-swanbeck/ur3_calculator.git
+git clone https://github.com/steven-swanbeck/ur3_calculator.git src/lightning_talk
 ```
 3. Clone the UR Robots ROS Driver:
 ```console
-git clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git Universal_Robots_ROS_Driver
+git clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git src/Universal_Robots_ROS_Driver
 ```
-4. And the associated description packages;
+4. And the associated description packages:
 ```console
-git clone git clone -b melodic-devel-staging https://github.com/ros-industrial/universal_robot.git universal_robot
+git clone -b melodic-devel-staging https://github.com/ros-industrial/universal_robot.git src/universal_robot
 ```
 5. Install all package dependencies:
 ```console
@@ -39,7 +39,7 @@ rosdep install --from-paths src --ignore-src -r -y
 ```
 6. Make the workspace:
 ```console
-cd .. && catkin_make
+catkin_make
 ```
 7. Source the workspace:
 ```console
