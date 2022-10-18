@@ -21,17 +21,27 @@ git clone https://github.com/steven-swanbeck/ur3_calculator.git
 ```
 3. Clone the UR Robots ROS Driver:
 ```console
-git clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git src/Universal_Robots_ROS_Driver
+git clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git Universal_Robots_ROS_Driver
 ```
-4. Install all package dependencies:
+4. And the associated description packages;
+```console
+git clone git clone -b melodic-devel-staging https://github.com/ros-industrial/universal_robot.git universal_robot
+```
+5. Install all package dependencies:
+```console
+sudo apt update -qq
+```
+```console
+rosdep update
+```
 ```console
 rosdep install --from-paths src --ignore-src -r -y
 ```
-5. Make the workspace:
+6. Make the workspace:
 ```console
-catkin_make
+cd .. && catkin_make
 ```
-6. Source the workspace:
+7. Source the workspace:
 ```console
 source devel/setup.bash
 ```
